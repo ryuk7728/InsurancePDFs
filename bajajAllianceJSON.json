@@ -1,0 +1,145 @@
+{
+  "policy_info": {
+    "insurance_company_name": "Bajaj Allianz General Insurance Co. Ltd.",
+    "policy_name": "Global Health Care",
+    "uin": "BAJHLIP23020V012223"
+  },
+  "benefits": {
+    "cancer": {
+      "covered": true, // Covered under In-patient Hospitalization Treatment (Page 10, I.1.vi for Chemo/Radio, Surgery implied)
+      "limit_details": {
+        "type": "Up to Sum Insured", // As per Table of Benefits (Page 13) for In-patient Hospitalization
+        "amount_inr": null, // It's up to overall Sum Insured
+        "percentage_sum_insured": 1.0, // Represents 100% of Sum Insured
+        "co_payment_percentage": null, // No specific co-payment mentioned for cancer treatment itself. General co-payment if applicable to policy.
+        "description": "Covered up to Sum Insured as part of in-patient hospitalization or day care procedures. Subject to waiting periods."
+      },
+      "covered_treatments": [
+        "Chemotherapy", // Page 10, I.1.vi
+        "Radiotherapy", // Page 10, I.1.vi
+        "Surgical Treatment", // Implied via coverage of surgeon fees, OT charges etc. for covered conditions
+        // Specific advanced treatments like targeted/hormone/immunotherapy would fall under "Modern Treatment Methods" (Page 12, item 12) up to SI, if medically necessary and not experimental.
+        "Modern Treatment Methods and Advancement in Technologies" // Page 12, item 12 (covers a broad range as per Annexure III if applicable)
+      ],
+      "waiting_period_months": 24, // For "Surgery on all internal or external tumours/ cysts/ nodules/polyps... with exception of Malignant tumor or growth" (Page 21, Excl02, item 18). If PED, then 36 months.
+      "sub_limits_specific_types": [], // No specific sub-limits detailed in the domestic table of benefits (Page 13)
+      "conditions_and_notes": [
+        "Covered under In-patient Hospitalization or Day Care Procedures.",
+        "If cancer is a Pre-Existing Disease (PED), a 36-month waiting period applies (Page 20, Excl01).",
+        "Specific surgeries for malignant tumors are subject to a 24-month waiting period (Page 21, Excl02, item 18)."
+      ]
+    },
+    "maternity": {
+      "covered": false, // Page 22, Excl18 - Domestic cover excludes childbirth, miscarriage (unless accidental), LMT.
+      "limit_details_normal_delivery_inr": null,
+      "limit_details_c_section_inr": null,
+      "pre_post_natal_expenses_covered": null,
+      "pre_post_natal_limit_inr": null,
+      "new_born_baby_cover_included": null, // Definition for New Born Baby exists (Page 4, Def 32), but coverage is tied to maternity benefit.
+      "new_born_baby_limit_inr": null,
+      "new_born_baby_vaccination_covered": null, // Vaccinations generally excluded unless post-bite or medically necessary (Page 23, item 9)
+      "waiting_period_months": null,
+      "max_deliveries_covered": null,
+      "age_limit_for_mother": null,
+      "conditions_and_notes": [
+        "Expenses traceable to childbirth, miscarriage (unless due to an Accident), and lawful medical termination of pregnancy are excluded under domestic cover (Page 22, Excl18).",
+        "Ectopic pregnancy IS covered (as an exception to Excl18 on Page 22)."
+      ]
+    },
+    "cataract": {
+      "covered": true, // Covered as a Day Care Procedure (Page 44, Annexure I, item 58) or In-patient.
+      "limit_per_eye_inr": null, // Not specified as a sub-limit; covered up to SI.
+      "limit_per_policy_year_inr": null, // Falls under overall Sum Insured.
+      "lens_type_coverage": null, // Policy does not specify differential coverage for lens types. Assumed standard IOL covered within reasonable/customary charges.
+      "waiting_period_months": 24, // Page 21, Excl02, item 2.
+      "conditions_and_notes": [
+        "Subject to a 24-month specified disease waiting period.",
+        "Covered under Day Care Procedures or In-patient treatment up to Sum Insured."
+      ]
+    },
+    "dialysis": {
+      "covered": true, // Covered under In-patient Hospitalization Treatment (Page 10, I.1.vi)
+      "limit_details": {
+        "type": "Up to Sum Insured", // As part of In-patient Hospitalization
+        "amount_per_session_inr": null, // No specific per-session limit detailed
+        "annual_limit_inr": null, // Falls under overall Sum Insured
+        "description": "Covered up to Sum Insured as part of in-patient care."
+      },
+      "related_to_illness": "Kidney Failure Requiring Regular Dialysis", // Page 3, Def 24
+      "waiting_period_months": 24, // For "Chronic Kidney Disease" (Page 21, Excl02, item 25). If PED, then 36 months. Acute conditions not on this list follow 30-day waiting period.
+      "conditions_and_notes": [
+        "Covered if Medically Necessary due to chronic kidney disease (subject to 24-month waiting period for CKD) or acute conditions (subject to 30-day initial waiting period)."
+      ]
+    }
+  },
+  "exclusions": {
+    "cancer": [
+      // The provided PDF's general exclusions section (Section D) does not list specific cancer types as exclusions.
+      // General exclusions like unproven/experimental treatments (Page 5, Def 45), or treatments for conditions
+      // existing at birth if not disclosed as PED, would apply.
+      // The template's examples (Skin Cancer, Carcinoma in situ, etc.) are not explicitly stated as exclusions here.
+      {
+        "type_or_condition": "Unproven or Experimental Treatments",
+        "excluded": true,
+        "unless_condition_met": null,
+        "details": "As per general policy exclusions (e.g., Page 5, Def 45 for Unproven/Experimental Treatment)."
+      },
+      {
+        "type_or_condition": "Congenital external diseases or defects or anomalies related to cancer if not disclosed and covered as PED.",
+        "excluded": true,
+        "details": "As per general exclusions (Page 23, item 7), unless specifically covered after PED waiting period."
+      }
+    ],
+    "maternity": [
+      {
+        "condition": "Medical Treatment Expenses traceable to childbirth (including complicated deliveries and caesarean sections incurred during Hospitalization)",
+        "excluded": true,
+        "notes": "Page 22, Excl18. Ectopic pregnancy is an exception and IS covered."
+      },
+      {
+        "condition": "Expenses towards miscarriage",
+        "excluded": true,
+        "unless_condition_met": "Due to an Accident (Page 22, Excl18)"
+      },
+      {
+        "condition": "Expenses towards lawful medical termination of pregnancy during the Policy Period",
+        "excluded": true,
+        "notes": "Page 22, Excl18"
+      },
+      {
+        "condition": "Sterility and Infertility treatments (e.g., IVF, ZIFT, GIFT, ICSI)",
+        "excluded": true,
+        "notes": "Page 22, Excl17"
+      },
+      {
+        "condition": "Assisted Reproduction services, Gestational Surrogacy, Reversal of sterilization",
+        "excluded": true,
+        "notes": "Page 22, Excl17"
+      }
+    ],
+    "cataract": [
+      {
+        "condition": "Treatment for correction of eye sight due to refractive error less than 7.5 dioptres.",
+        "excluded": true,
+        "details": "Page 22, Excl15. This is a general refractive error exclusion; applies if cataract surgery is primarily for refractive correction below this threshold."
+      },
+      {
+        "condition": "Use of special/advanced lenses beyond standard monofocal IOL if costs exceed reasonable and customary charges for standard treatment or overall Sum Insured.",
+        "excluded_or_sublimited": true,
+        "details": "Policy does not specify differential coverage for lens types. Coverage is within overall limits. Advanced lenses might lead to out-of-pocket expenses if they exceed what's considered reasonable/customary for a standard procedure or if the total bill exceeds SI."
+      }
+    ],
+    "dialysis": [
+      {
+        "condition": "Dialysis for Chronic Kidney Disease if diagnosed/treated within the 24-month specified disease waiting period (or 36-month PED waiting period if pre-existing).",
+        "excluded": true,
+        "details": "Based on waiting period clauses on Page 20 (Excl01) and Page 21 (Excl02, item 25)."
+      },
+      {
+        "condition": "Experimental forms of dialysis.",
+        "excluded": true,
+        "details": "Falls under 'Unproven Treatments' (Page 22, Excl16 / Page 5, Def 45)."
+      }
+    ]
+  }
+}

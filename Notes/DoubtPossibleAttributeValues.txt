@@ -1,0 +1,68 @@
+In cancer there are 2 conditions for waiting_period_months, if its a PED(Pre-existing disease) then its 36 months, else its 24 months.
+
+BENEFITS:
+
+(Need Different cancer types which could be covered)
+Cancer:
+
+covered_treatments: [ // Array of strings listing covered aspects
+        // e.g., "Chemotherapy", "Radiotherapy", "Surgical Treatment", "Hormone Therapy", "Targeted Therapy", "Immunotherapy"
+      ]
+
+
+"sub_limits_specific_types": [ // Array of objects for specific cancer types if detailed
+        // { "cancer_type": "Oral Chemotherapy", "limit_amount_inr": 50000 }
+      ]
+
+(Need Different lens types which could be covered)
+
+Cataract:
+
+"lens_type_coverage": null, // String: e.g., "Standard monofocal IOL covered", "Multifocal lenses subject to sub-limit"
+
+
+(Need Different types of ways that dialysis amt is covered)
+
+Dialysis:
+
+"type": null, // e.g., "Per Session Limit", "Part of Hospitalization Limit", "Up to Sum Insured"
+
+
+EXCLUSIONS:
+
+Cancer:
+
+(What are the different types of cancer conditions)
+      {
+        "type_or_condition": "Skin Cancer (Non-Melanoma)", //String containing the type of cancer
+        "excluded": true, // boolean
+        "unless_condition_met": "Unless there is evidence of metastases to lymph nodes or beyond."
+      },
+
+
+Maternity:
+
+(What are the different types of maternity related conditions)
+
+      {
+        "condition": "Expenses related to voluntary medical termination of pregnancy.",
+        "excluded": true
+      },
+
+Cataract:
+
+(What are the different types of cataract conditions, Its required because then its standardized to the LLM on what condition is matching in the relevant scenario)
+      {
+        "condition": "Treatment for correction of eye sight due to refractive error less than X dioptres (if applicable, sometimes general).",
+        "excluded": true,
+        "details": "If cataract is primarily for refractive correction below a certain threshold."
+      }
+
+Dialysis:
+
+(What are the different types of dialysis conditions)
+      {
+        "condition": "Dialysis for acute kidney injury not leading to chronic kidney disease (if policy specifies this).",
+        "excluded": true,
+        "details": "Policy might only cover dialysis for end-stage renal disease requiring regular dialysis."
+      }

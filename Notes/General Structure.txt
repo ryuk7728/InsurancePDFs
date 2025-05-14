@@ -1,0 +1,42 @@
+Sir I studied the pdfs,
+
+The pdfs follows a general structure where its divided into multiple sections such as:
+
+1) Preamble
+2) Definitions
+3) Benefits
+4) Exclusions
+5) Terms and Conditions
+6) Annexures
+
+
+In Bajaj alliance
+
+Section A) Preamble
+Section B) Definitions
+Section C) Benefits
+	PART A - Domestic Coverage Within India Only, for Imperial and 	Imperial Plus Plans) 
+	PART B - International Coverage
+		1. In patient benefits
+		2. Out patient benefits
+Section D) Exclusions
+	1.EXCLUSIONS- STANDARD EXCLUSIONS APPLICABLE TO PART A- DOMESTIC 	COVER UNDER SECTION C) BENEFITS COVERED UNDER THE POLICY
+	
+	2.EXCLUSIONS– SPECIFIC EXCLUSIONS APPLICABLE TO PART A- DOMESTIC 	COVER UNDER 
+	SECTION C) BENEFITS COVERED UNDER THE POLICY
+
+	3.SECTION D) EXCLUSIONS- STANDARD EXCLUSIONS APPLICABLE TO PART B- 	INTERNATIONAL COVER 
+	UNDER SECTION C) BENEFITS COVERED UNDER THE POLICY  
+
+	4.SECTION D) EXCLUSIONS– SPECIFIC EXCLUSIONS APPLICABLE TO 	INTERNATIONAL COVER UNDER 
+	SECTION C) BENEFITS COVERED UNDER THE POLICY 
+
+
+
+
+
+Section E) Terms and Conditions
+Section F) Annexures
+
+
+In the insurance policy JSON we need to segregate the stuff by plans

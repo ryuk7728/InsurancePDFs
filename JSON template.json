@@ -1,0 +1,130 @@
+{
+  "policy_info": {
+    "insurance_company_name": null, // To be filled
+    "policy_name": null,            // To be filled
+    "uin": null                     // To be filled
+  },
+  "benefits": {
+    "cancer": {
+      "covered": null, // boolean: true or false
+      "limit_details": {
+        "type": null, // e.g., "Up to Sum Insured", "Specific Sub-limit", "Co-payment Applicable"
+        "amount_inr": null, // number: The specific limit amount if applicable
+        "percentage_sum_insured": null, // number: e.g., 0.5 for 50% if it's a % of SI
+        "co_payment_percentage": null, // number: e.g., 0.1 for 10%
+        "description": null // String: Any textual description of the limit, e.g., "Up to Rs. 5 Lakhs per policy year"
+      },
+      "covered_treatments": [ // Array of strings listing covered aspects
+        // e.g., "Chemotherapy", "Radiotherapy", "Surgical Treatment", "Hormone Therapy", "Targeted Therapy", "Immunotherapy"
+      ],
+      "waiting_period_months": null, // number: e.g., 24, or specific if different from general PED
+      "sub_limits_specific_types": [ // Array of objects for specific cancer types if detailed
+        // { "cancer_type": "Oral Chemotherapy", "limit_amount_inr": 50000 }
+      ],
+      "conditions_and_notes": [ // Array of strings
+        // e.g., "Pre-authorization required for targeted therapies"
+      ]
+    },
+    "maternity": {
+      "covered": null, // boolean
+      "limit_details_normal_delivery_inr": null, // number
+      "limit_details_c_section_inr": null,      // number
+      "pre_post_natal_expenses_covered": null, // boolean
+      "pre_post_natal_limit_inr": null,         // number
+      "new_born_baby_cover_included": null,   // boolean
+      "new_born_baby_limit_inr": null,          // number
+      "new_born_baby_vaccination_covered": null, // boolean
+      "waiting_period_months": null, // number: e.g., 9, 24, 48
+      "max_deliveries_covered": null, // number: e.g., 2
+      "age_limit_for_mother": null,   // String: e.g., "18-45 years"
+      "conditions_and_notes": [
+        // e.g., "Termination of pregnancy covered only if medically necessary or due to accident."
+      ]
+    },
+    "cataract": {
+      "covered": null, // boolean
+      "limit_per_eye_inr": null, // number
+      "limit_per_policy_year_inr": null, // number (if an aggregate limit for cataract exists)
+      "lens_type_coverage": null, // String: e.g., "Standard monofocal IOL covered", "Multifocal lenses subject to sub-limit"
+      "waiting_period_months": null, // number: e.g., 24
+      "conditions_and_notes": [
+        // e.g., "Pre-authorization required."
+      ]
+    },
+    "dialysis": {
+      "covered": null, // boolean (typically covered under hospitalization or specific critical illness)
+      "limit_details": {
+        "type": null, // e.g., "Per Session Limit", "Part of Hospitalization Limit", "Up to Sum Insured"
+        "amount_per_session_inr": null, // number
+        "annual_limit_inr": null, // number
+        "description": null // String: e.g., "Covered up to Sum Insured as part of in-patient care"
+      },
+      "related_to_illness": "Kidney Failure Requiring Regular Dialysis", // Or other relevant illness
+      "waiting_period_months": null, // number (if specific for dialysis as a treatment, often tied to kidney disease PED)
+      "conditions_and_notes": [
+        // e.g., "Usually covered if Medically Necessary due to chronic kidney disease."
+      ]
+    }
+  },
+  "exclusions": {
+    "cancer": [ // Array of exclusion objects specific to cancer
+      {
+        "type_or_condition": "Skin Cancer (Non-Melanoma)", //String containing the type of cancer
+        "excluded": true, // boolean
+        "unless_condition_met": "Unless there is evidence of metastases to lymph nodes or beyond."
+      },
+      {
+        "type_or_condition": "Carcinoma in situ (All Sites)",
+        "excluded": true,
+        "unless_condition_met": null
+      },
+      {
+        "type_or_condition": "Prostate Cancer (Low Grade)",
+        "excluded": true,
+        "unless_condition_met": "Unless histologically classified as having a Gleason score greater than 6 or having progressed to at least clinical TNM classification T2N0M0."
+      }
+      // Add other specific cancer exclusions
+    ],
+    "maternity": [ // Array of exclusion objects specific to maternity
+      {
+        "condition": "Expenses related to voluntary medical termination of pregnancy.",
+        "excluded": true
+      },
+      {
+        "condition": "Sterility and Infertility treatments (e.g., IVF, ZIFT, GIFT, ICSI).",
+        "excluded": true
+      },
+      {
+        "condition": "Ectopic Pregnancy (if specifically excluded, though often covered)",
+        "excluded": false, // Example: assuming it's usually covered, but note the structure
+        "notes": "Often covered as an exception to general maternity exclusion if maternity benefit is not opted or not yet active."
+      }
+      // Add other specific maternity exclusions
+    ],
+    "cataract": [ // Array of exclusion objects specific to cataract
+      {
+        "condition": "Treatment for correction of eye sight due to refractive error less than X dioptres (if applicable, sometimes general).",
+        "excluded": true,
+        "details": "If cataract is primarily for refractive correction below a certain threshold."
+      },
+      {
+        "condition": "Use of special/advanced lenses beyond standard monofocal IOL (if not covered or sub-limited).",
+        "excluded_or_sublimited": true, // Use a more descriptive key if it's sub-limited
+        "details": "Check for specific lens type coverage and sub-limits under benefits."
+      }
+      // Add other specific cataract exclusions
+    ],
+    "dialysis": [ // Array of exclusion objects specific to dialysis
+      {
+        "condition": "Dialysis for acute kidney injury not leading to chronic kidney disease (if policy specifies this).",
+        "excluded": true,
+        "details": "Policy might only cover dialysis for end-stage renal disease requiring regular dialysis."
+      },
+      {
+        "condition": "Experimental forms of dialysis.",
+        "excluded": true
+      }
+      // Add other specific dialysis exclusions
+    ]
+  }
+}
