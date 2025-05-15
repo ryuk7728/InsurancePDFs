@@ -1,3 +1,23 @@
 Bajaj:
 
 "Modern Treatment Methods and Advancement in Technologies"??
+
+BENFITS 
+
+CATARACTS:
+(Instead of null maybe sum insured)
+"limit_per_eye_inr": null, // Not specified as a sub-limit; covered up to SI.
+"limit_per_policy_year_inr": null, // Falls under overall Sum Insured.
+
+DIALYSIS
+(Instead of null maybe sum insured)
+"amount_per_session_inr": null, // No specific per-session limit detailed
+"annual_limit_inr": null, // Falls under overall Sum Insured
+
+
+Cholamandalam:
+
+Tumors described as carcinoma in situ, benign..., non melanoma skin carcinoma, malignant melanoma, tumors of prostate, thyroid cancers
+(Done)
+
+Need to separate normal waiting period and waiting period for PED for the first 3 JSONS

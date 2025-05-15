@@ -94,7 +94,7 @@
       {
         "condition": "Medical Treatment Expenses traceable to childbirth (including complicated deliveries and caesarean sections incurred during Hospitalization)",
         "excluded": true,
-        "notes": "Page 22, Excl18. Ectopic pregnancy is an exception and IS covered."
+        "details": "Page 22, Excl18. Ectopic pregnancy is an exception and IS covered."
       },
       {
         "condition": "Expenses towards miscarriage",
@@ -104,17 +104,17 @@
       {
         "condition": "Expenses towards lawful medical termination of pregnancy during the Policy Period",
         "excluded": true,
-        "notes": "Page 22, Excl18"
+        "details": "Page 22, Excl18"
       },
       {
         "condition": "Sterility and Infertility treatments (e.g., IVF, ZIFT, GIFT, ICSI)",
         "excluded": true,
-        "notes": "Page 22, Excl17"
+        "details": "Page 22, Excl17"
       },
       {
         "condition": "Assisted Reproduction services, Gestational Surrogacy, Reversal of sterilization",
         "excluded": true,
-        "notes": "Page 22, Excl17"
+        "details": "Page 22, Excl17"
       }
     ],
     "cataract": [

@@ -1,5 +1,7 @@
 In cancer there are 2 conditions for waiting_period_months, if its a PED(Pre-existing disease) then its 36 months, else its 24 months.
 
+Answer to the doubts: The values can be derived by analyzing multiple docs.
+
 BENEFITS:
 
 (Need Different cancer types which could be covered)

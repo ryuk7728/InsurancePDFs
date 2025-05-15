@@ -1,0 +1,135 @@
+{
+  "policy_info": {
+    "insurance_company_name": "Navi General Insurance Ltd", // Page 1, Preamble
+    "policy_name": "NAVI SMART HEALTH", // Page 1, Header
+    "uin": "NAVHLIP23003V012223" // Page 1, Footer
+  },
+  "benefits": {
+    "cancer": {
+      "covered": true, // Inferred: Cancer treatments like chemotherapy, robotic surgeries are covered as Modern Treatments (Page 5, 2.2.14) and under general hospitalization (Page 6, 3.1)
+      "limit_details": {
+        "type": "Up to Sum Insured", // Page 6, Section 3.1 Hospitalization
+        "amount_inr": null, // Depends on Sum Insured chosen
+        "percentage_sum_insured": 1.0,
+        "co_payment_percentage": null, // No specific co-payment mentioned for cancer; general policy terms apply if any overall co-payment exists (not explicitly stated).
+        "description": "Covered up to Sum Insured under Hospitalization, including Modern Treatments for cancer."
+      },
+      "covered_treatments": [
+        "Oral Chemotherapy", // Page 5, 2.2.14 (d) Modern Treatment
+        "Immunotherapy - Monoclonal Antibody", // Page 5, 2.2.14 (e) Modern Treatment
+        "Robotic Surgeries", // Page 5, 2.2.14 (g) Modern Treatment
+        "Stereotactic radio Surgeries", // Page 5, 2.2.14 (h) Modern Treatment
+        "Stem cell therapy (haematological)", // Page 5, 2.2.14 (l) Modern Treatment
+        "Surgical Treatment for Cancer", // Inferred from hospitalization coverage (Page 6, 3.1)
+        "Radiotherapy (Conventional)" // Inferred from hospitalization coverage (Page 6, 3.1)
+      ],
+      "waiting_period_months": 1, // Page 8, 4.1.2 (a) for specific surgeries like Hysterectomy (unless malignancy) which could be cancer-related. General 30-day for other illnesses (Page 9, 4.1.3.a)
+      "waiting_period_months_PED": 12, // Page 8, 4.1.1 (a)
+      "sub_limits_specific_types": [], // No specific sub-limits mentioned for cancer types. Modern treatments are covered up to SI.
+      "conditions_and_notes": [
+        "Deductible applies before benefits are payable. (Page 6, 3.1)",
+        "Initial 30-day waiting period for any illness (non-accidental) unless specified otherwise. (Page 9, 4.1.3.a)",
+        "Some surgeries (e.g., Hysterectomy) have a 12-month waiting period unless for malignancy. (Page 9, Gynaecological list)"
+      ]
+    },
+    "maternity": {
+      "covered": false, // Page 10, 4.1.18 (Maternity - Code - Excl18)
+      "limit_details_normal_delivery_inr": null,
+      "limit_details_c_section_inr": null,
+      "pre_post_natal_expenses_covered": false,
+      "pre_post_natal_limit_inr": null,
+      "new_born_baby_cover_included": false, // Newborn baby definition exists (Page 3, 2.1.28) but maternity expenses are excluded.
+      "new_born_baby_limit_inr": null,
+      "new_born_baby_vaccination_covered": false,
+      "waiting_period_months": null, // Not applicable
+      "waiting_period_months_PED": null, // Not applicable
+      "max_deliveries_covered": null,
+      "age_limit_for_mother": null,
+      "conditions_and_notes": [
+        "Childbirth expenses (incl. C-sections) excluded. (Page 10, 4.1.18.a)",
+        "Miscarriage expenses excluded (unless due to Accident). (Page 10, 4.1.18.b)",
+        "Lawful medical termination of pregnancy expenses excluded. (Page 10, 4.1.18.b)",
+        "Ectopic pregnancy treatment IS covered (as an exception to maternity exclusion). (Page 10, 4.1.18.a)"
+      ]
+    },
+    "cataract": {
+      "covered": true, // Page 8, 4.1.2 (e) List of specific diseases/procedures includes Cataract
+      "limit_per_eye_inr": null, // No specific sub-limit per eye mentioned; covered up to Sum Insured.
+      "limit_per_policy_year_inr": null, // Covered up to Sum Insured.
+      "lens_type_coverage": "Standard lens costs likely covered within overall SI.", // Not specified for lens types.
+      "waiting_period_months": 12, // Page 8, 4.1.2 (a)
+      "waiting_period_months_PED": 12, // Page 8, 4.1.1 (a) & 4.1.2 (d) - longer applies, both 12m here.
+      "conditions_and_notes": [
+        "Deductible applies before benefits are payable. (Page 6, 3.1)",
+        "Correction of eyesight due to refractive error less than 7.5 dioptres excluded. (Page 10, 4.1.15)"
+      ]
+    },
+    "dialysis": {
+      "covered": true, // Inferred from hospitalization coverage for kidney conditions. Not explicitly listed as a day-care procedure or modern treatment.
+      "limit_details": {
+        "type": "Up to Sum Insured", // Page 6, Section 3.1 Hospitalization
+        "amount_per_session_inr": null,
+        "annual_limit_inr": null, // Covered up to Annual Sum Insured
+        "co_payment_percentage": null, // No specific co-payment mentioned for dialysis
+        "description": "Covered under general hospitalization if medically necessary for a covered kidney condition."
+      },
+      "related_to_illness": "Kidney conditions requiring dialysis (e.g., chronic kidney disease)", // Inferred, not explicitly defined with dialysis.
+      "waiting_period_months": 12, // If related to a condition listed under 4.1.2 (e.g. Calculus of Urinary system can lead to kidney issues)
+      "waiting_period_months_PED": 12, // Page 8, 4.1.1 (a)
+      "conditions_and_notes": [
+        "Deductible applies before benefits are payable. (Page 6, 3.1)",
+        "Initial 30-day waiting period for any illness (non-accidental). (Page 9, 4.1.3.a)"
+      ]
+    }
+  },
+  "exclusions": {
+    "cancer": [
+      {
+        "type_or_condition": "Cosmetic/Plastic Surgery (not for cancer reconstruction)", // Page 10, 4.1.8
+        "excluded": true,
+        "unless_condition_met": "Reconstruction post Accident, Burn(s) or Cancer, or Medically Necessary Treatment certified by attending Medical Practitioner."
+      },
+      {
+        "type_or_condition": "Unproven cancer treatments", // Page 10, 4.1.16
+        "excluded": true,
+        "details": "Lacks significant medical documentation for effectiveness."
+      },
+      {
+        "type_or_condition": "Non-prescribed dietary supplements for cancer", // Page 10, 4.1.14
+        "excluded": true,
+        "unless_condition_met": "Prescribed by Medical Practitioner during Hospitalization or day care."
+      }
+    ],
+    "maternity": [
+      {
+        "condition": "Childbirth (incl. C-sections), miscarriage (non-accidental), lawful MTP.", // Page 10, 4.1.18
+        "excluded": true,
+        "unless_condition_met": "Ectopic pregnancy treatment is covered."
+      },
+      {
+        "condition": "Sterility and Infertility treatments", // Page 10, 4.1.17
+        "excluded": true,
+        "details": "Incl. contraception, sterilization, ART (IVF, ZIFT, GIFT, ICSI), surrogacy, reversal of sterilization."
+      }
+    ],
+    "cataract": [
+      {
+        "condition": "Refractive error correction < 7.5 dioptres", // Page 10, 4.1.15
+        "excluded": true,
+        "details": "General exclusion for refractive errors, may impact cataract if primary reason is refractive correction."
+      }
+    ],
+    "dialysis": [
+      {
+        "condition": "Dialysis for kidney conditions not meeting policy's general coverage terms for illness", // Inferred from general scope of cover for diagnosed illnesses.
+        "excluded": true,
+        "details": "Coverage for dialysis depends on it being a medically necessary treatment for a covered underlying kidney disease/illness."
+      },
+      {
+        "condition": "Unproven/Experimental dialysis methods", // Page 10, 4.1.16
+        "excluded": true,
+        "details": "If the specific dialysis method lacks established medical practice."
+      }
+    ]
+  }
+}

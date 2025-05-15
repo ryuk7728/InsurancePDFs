@@ -1,0 +1,100 @@
+{
+  "policy_info": {
+    "insurance_company_name": "Bajaj Allianz General Insurance Co. Ltd.",
+    "policy_name": "Health Prime (Rider)",
+    "uin": "BAJHLIA22169V012122" // Found in the footer of the PDF pages
+  },
+  "benefits": {
+    "cancer": {
+      "covered": false, // This rider does not cover cancer treatment.
+      "limit_details": {
+        "type": null,
+        "amount_inr": null,
+        "percentage_sum_insured": null,
+        "co_payment_percentage": null,
+        "description": "Not covered under the Health Prime Rider. Would be subject to Base Policy terms."
+      },
+      "covered_treatments": [],
+      "waiting_period_months": null,
+      "sub_limits_specific_types": [],
+      "conditions_and_notes": [
+        "The Health Prime product is a rider and does not provide coverage for cancer treatment.",
+        "Coverage for cancer would be determined by the terms of the underlying Base Health Insurance Policy to which this rider is attached."
+      ]
+    },
+    "maternity": {
+      "covered": false, // This rider does not cover maternity expenses.
+      "limit_details_normal_delivery_inr": null,
+      "limit_details_c_section_inr": null,
+      "pre_post_natal_expenses_covered": false,
+      "pre_post_natal_limit_inr": null,
+      "new_born_baby_cover_included": false,
+      "new_born_baby_limit_inr": null,
+      "new_born_baby_vaccination_covered": false,
+      "waiting_period_months": null,
+      "max_deliveries_covered": null,
+      "age_limit_for_mother": null,
+      "conditions_and_notes": [
+        "The Health Prime product is a rider and does not provide coverage for maternity expenses.",
+        "Coverage for maternity would be determined by the terms of the underlying Base Health Insurance Policy to which this rider is attached."
+      ]
+    },
+    "cataract": {
+      "covered": false, // This rider does not cover cataract surgery.
+      "limit_per_eye_inr": null,
+      "limit_per_policy_year_inr": null,
+      "lens_type_coverage": null,
+      "waiting_period_months": null,
+      "conditions_and_notes": [
+        "The Health Prime product is a rider and does not provide coverage for cataract surgery.",
+        "Coverage for cataract would be determined by the terms of the underlying Base Health Insurance Policy to which this rider is attached."
+      ]
+    },
+    "dialysis": {
+      "covered": false, // This rider does not cover dialysis.
+      "limit_details": {
+        "type": null,
+        "amount_per_session_inr": null,
+        "annual_limit_inr": null,
+        "description": "Not covered under the Health Prime Rider. Would be subject to Base Policy terms."
+      },
+      "related_to_illness": null,
+      "waiting_period_months": null,
+      "conditions_and_notes": [
+        "The Health Prime product is a rider and does not provide coverage for dialysis.",
+        "Coverage for dialysis would be determined by the terms of the underlying Base Health Insurance Policy to which this rider is attached."
+      ]
+    }
+  },
+  "exclusions": {
+    "cancer": [
+      {
+        "type_or_condition": "All cancer treatments",
+        "excluded": true,
+        "unless_condition_met": null,
+        "details": "This Health Prime Rider does not cover cancer."      
+      }
+    ],
+    "maternity": [
+      {
+        "condition": "All maternity-related expenses",
+        "excluded": true,
+        "details": "This Health Prime Rider does not cover maternity. Refer to Base Policy."
+      }
+    ],
+    "cataract": [
+      {
+        "condition": "All cataract-related treatments",
+        "excluded_or_sublimited": true, // excluded by this rider
+        "details": "This Health Prime Rider does not cover cataract. Refer to Base Policy."
+      }
+    ],
+    "dialysis": [
+      {
+        "condition": "All dialysis treatments",
+        "excluded": true,
+        "details": "This Health Prime Rider does not cover dialysis. Refer to Base Policy."
+      }
+    ]
+  }
+}

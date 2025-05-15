@@ -1,0 +1,166 @@
+{
+  "policy_info": {
+    "insurance_company_name": "ICICI Lombard General Insurance Company Limited", // Page 1, Header
+    "policy_name": "Golden Shield", // Page 1, Center
+    "uin": "ICIHLIP22012V012223" // Page 1, Footer Left
+  },
+  "benefits": {
+    "cancer": {
+      "covered": true, // Page 5, In-Patient Treatment & Day Care Treatment
+      "limit_details": {
+        "type": "Specific Sub-limit", // Page 10, Sub-limits table
+        "amount_inr": null, // Varies by Annual SI: ₹2L/₹3.5L/₹5L (Page 10)
+        "percentage_sum_insured": null,
+        "co_payment_percentage": 0.5, // Page 8, Section 12 (50% base co-payment)
+        "description": "Cancer treatment sub-limit based on Annual Sum Insured. (Page 10)"
+      },
+      "covered_treatments": [
+        "Chemotherapy (Intravenous/Oral)", // Page 5, d.2.iv; Page 10
+        "Radiotherapy", // Page 5, d.2.iv; Page 10
+        "Surgical Treatment for Cancer", // Page 5, d.1.v; Page 10
+        "Cancer-related medicines & consumables", // Page 5, d.1.v
+        "Robotic surgeries for cancer", // Page 6, Sr.No.7; Page 10
+        "Immunotherapy - Monoclonal Antibody", // Page 6, Sr.No.2
+        "Stem cell therapy (haematological)" // Page 6, Sr.No.4
+      ],
+      "waiting_period_months": 1, // Initial 30-day waiting period for any illness (Page 19, Code-Excl03). Specific surgeries may have 24 months.
+      "waiting_period_months_PED": 24, // Page 17, Code-Excl01
+      "sub_limits_specific_types": [
+        {
+          "cancer_type": "Cancer treatment (SI 3L/4L/5L)", // Page 10
+          "limit_amount_inr": 200000
+        },
+        {
+          "cancer_type": "Cancer treatment (SI 10L/15L/20L)", // Page 10
+          "limit_amount_inr": 350000
+        },
+        {
+          "cancer_type": "Cancer treatment (SI >20L)", // Page 10
+          "limit_amount_inr": 500000
+        },
+        {
+          "cancer_type": "Robotic surgeries (SI 3L/4L/5L)", // Page 10
+          "limit_amount_inr": 100000
+        },
+        {
+          "cancer_type": "Robotic surgeries (SI 10L/15L/20L)", // Page 10
+          "limit_amount_inr": 175000
+        },
+        {
+          "cancer_type": "Robotic surgeries (SI >20L)", // Page 10
+          "limit_amount_inr": 250000
+        }
+      ],
+      "conditions_and_notes": [
+        "50% base co-payment on admissible claim. (Page 8, Section 12)",
+        "Initial 30-day waiting for any illness (non-accidental). (Page 19, Code-Excl03)",
+        "24-month waiting for surgeries for listed conditions like tumors/cysts, even if malignancy confirmed later. (Page 18-19, Code-Excl02)",
+        "Reconstruction surgery post-cancer covered. (Page 19, Code-Excl08)"
+      ]
+    },
+    "maternity": {
+      "covered": false, // Page 20, Code-Excl18 (explicitly excluded)
+      "limit_details_normal_delivery_inr": null,
+      "limit_details_c_section_inr": null,
+      "pre_post_natal_expenses_covered": false,
+      "pre_post_natal_limit_inr": null,
+      "new_born_baby_cover_included": false,
+      "new_born_baby_limit_inr": null,
+      "new_born_baby_vaccination_covered": false,
+      "waiting_period_months": null, // Not applicable
+      "waiting_period_months_PED": null, // Not applicable
+      "max_deliveries_covered": null,
+      "age_limit_for_mother": null,
+      "conditions_and_notes": [
+        "Maternity expenses (childbirth, C-sections, miscarriage unless accidental, lawful MTP) excluded. (Page 20, Code-Excl18)",
+        "Ectopic pregnancy treatment IS covered. (Page 20, Code-Excl18)"
+      ]
+    },
+    "cataract": {
+      "covered": true, // Page 10, Sub-limits table lists "Treatment of cataract"
+      "limit_per_eye_inr": null, // Varies: ₹25K/₹50K/₹75K per eye by Annual SI (Page 10)
+      "limit_per_policy_year_inr": null, // Per-eye limit applies.
+      "lens_type_coverage": "Standard lens costs within sub-limit likely covered.", // Not specified
+      "waiting_period_months": 24, // Page 18, List of specific illnesses (Eye - Cataract) under Code-Excl02
+      "waiting_period_months_PED": 24, // Page 17, Code-Excl01 & Code-Excl02.c (longer applies, both 24m)
+      "conditions_and_notes": [
+        "Per-eye sub-limit: ₹25K (SI ≤5L), ₹50K (SI 10L-20L), ₹75K (SI >20L). (Page 10)",
+        "50% base co-payment on admissible claim. (Page 8, Section 12)"
+      ]
+    },
+    "dialysis": {
+      "covered": true, // Page 5, Day Care, item iv "hemodialysis"
+      "limit_details": {
+        "type": "Up to Sum Insured or Specific Sub-limit", // Page 10 (sub-limit for "Other renal complications")
+        "amount_per_session_inr": null,
+        "annual_limit_inr": null, // Up to Annual SI or renal sub-limit
+        "co_payment_percentage": 0.5, // Page 8, Section 12 (50% base co-payment)
+        "description": "Hemodialysis covered. May fall under 'Other renal complications' sub-limit. (Page 5, Page 10)"
+      },
+      "related_to_illness": "Chronic/End Stage Renal Failure, chronic kidney disease including dialysis", // Page 18, Uro-genital conditions
+      "waiting_period_months": 24, // Page 18, List of specific illnesses (Uro-genital - Chronic Renal Failure) under Code-Excl02
+      "waiting_period_months_PED": 24, // Page 17, Code-Excl01 & Code-Excl02.c (longer applies, both 24m)
+      "conditions_and_notes": [
+        "50% base co-payment on admissible claim. (Page 8, Section 12)",
+        "Sub-limits for 'Other renal complications' may apply (₹2L/₹3.5L/₹5L by SI). (Page 10)",
+        "Automation machine for peritoneal dialysis not payable. (Page 5, d.1.vi & d.2.vi)"
+      ]
+    }
+  },
+  "exclusions": {
+    "cancer": [
+      {
+        "type_or_condition": "Cosmetic/plastic surgery (not for cancer reconstruction)", // Page 19, Code-Excl08
+        "excluded": true,
+        "unless_condition_met": "Unless for reconstruction post Accident, Burn(s) or Cancer."
+      },
+      {
+        "type_or_condition": "Unproven cancer treatments", // Page 20, Code-Excl16
+        "excluded": true,
+        "details": "Lacks significant medical documentation for effectiveness."
+      },
+      {
+        "type_or_condition": "Non-prescribed dietary supplements for cancer", // Page 20, Code-Excl14
+        "excluded": true,
+        "unless_condition_met": "Prescribed during hospitalization/day care."
+      }
+    ],
+    "maternity": [
+      {
+        "condition": "Childbirth, C-sections, miscarriage (non-accidental), lawful MTP.", // Page 20, Code-Excl18
+        "excluded": true,
+        "unless_condition_met": "Ectopic pregnancy treatment is covered.",
+        "details": "Specific exclusion for maternity expenses."
+      },
+      {
+        "condition": "Sterility and Infertility treatments", // Page 20, Code-Excl17
+        "excluded": true,
+        "details": "Incl. contraception, ART (IVF, etc.), surrogacy."
+      }
+    ],
+    "cataract": [
+      {
+        "condition": "Refractive error correction < 7.5 dioptres", // Page 20, Code-Excl15
+        "excluded": true,
+        "details": "General exclusion for refractive errors."
+      }
+    ],
+    "dialysis": [
+      {
+        "condition": "Dialysis for kidney conditions not meeting 'Chronic/End Stage Renal Failure' definition", // Inferred from coverage scope
+        "excluded": true,
+        "details": "Benefit tied to specific diagnoses. (Page 18)"
+      },
+      {
+        "condition": "Unproven dialysis methods", // Page 20, Code-Excl16
+        "excluded": true,
+        "details": "If specific dialysis type is experimental."
+      },
+      {
+        "condition": "Automation machine for peritoneal dialysis", // Page 5, d.1.vi & d.2.vi
+        "excluded": true,
+        "details": "Specifically not payable."
+      }
+    ]
+  }
+}

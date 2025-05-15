@@ -1,0 +1,176 @@
+{
+  "policy_info": {
+    "insurance_company_name": "CHOLAMANDALAM MS GENERAL INSURANCE COMPANY LIMITED", // Page 1, Top
+    "policy_name": "FLEXI MAX PROTECT", // Page 1, Center
+    "uin": "CHOHLIP21017V012122" // Page 1, Under Policy Name
+  },
+  "benefits": {
+    "cancer": {
+      "covered": true, // Page 2, Table, "Cancer of specified severity" is listed as CI #1
+      "limit_details": {
+        "type": "Lumpsum Benefit up to Sum Insured", // Page 2, Section 2.1.a "Diagnosis Benefit"
+        "amount_inr": null, // Benefit is Lumpsum up to Sum Insured, specific amount depends on SI chosen
+        "percentage_sum_insured": 1.0, // Implied by "Lumpsum Benefit equal to the Sum Insured" (Page 2, Section 2.1.a)
+        "co_payment_percentage": null, // Not mentioned for CI benefit
+        "description": "Lumpsum Benefit equal to the Sum Insured specified in the Policy Schedule, provided the critical illness is diagnosed after 90 days of commencement of the Policy and completion of the Survival Period." // Page 2, Section 2.1.a
+      },
+      "covered_treatments": [
+        // Reflects the definition of "Cancer of Specified Severity" that triggers the lump sum benefit
+        "Malignant tumor characterized by the uncontrolled growth & spread of malignant cells with invasion and destruction of normal tissues (diagnosis must be supported by histological evidence of malignancy)", // Page 12, Section 31.1
+        "Leukemia (when meeting the definition of Cancer of Specified Severity)", // Page 12, Section 31.1
+        "Lymphoma (when meeting the definition of Cancer of Specified Severity)", // Page 12, Section 31.1
+        "Sarcoma (when meeting the definition of Cancer of Specified Severity)" // Page 12, Section 31.1
+      ],
+      "waiting_period_months": 3, // Page 2, Section 2.1.a ("after 90 days"); Page 25, Section 4, Item 1 ("within the first 90 days...is excluded")
+      "sub_limits_specific_types": [], // No specific sub-limits mentioned for cancer types in a lump sum CI policy
+      "conditions_and_notes": [
+        "Diagnosis must be 'Cancer of Specified Severity' as defined in the policy (Page 12, Section 31.1), which includes specific exclusions listed under that definition.",
+        "Diagnosis must occur after 90 days from policy commencement. (Page 2, Section 2.1.a & Page 25, Section 4, Item 1)",
+        "Survival period (e.g., 30 days or NIL days as opted and mentioned in policy schedule) from date of diagnosis is required. (Page 4, Section 2.1.b)",
+        "The Base cover shall immediately cease to exist for the Insured upon diagnosis of the defined Critical Illness. (Page 4, Section 2.1.c.1)"
+      ]
+    },
+    "maternity": {
+      "covered": false, // Maternity is not listed as a covered Critical Illness in this policy (Pages 2-4, List of CIs)
+      "limit_details_normal_delivery_inr": null,
+      "limit_details_c_section_inr": null,
+      "pre_post_natal_expenses_covered": false, // Not applicable for a CI policy
+      "pre_post_natal_limit_inr": null,
+      "new_born_baby_cover_included": false, // Not applicable for a CI policy
+      "new_born_baby_limit_inr": null,
+      "new_born_baby_vaccination_covered": false, // Not applicable for a CI policy
+      "waiting_period_months": null,
+      "max_deliveries_covered": null,
+      "age_limit_for_mother": null,
+      "conditions_and_notes": [
+        "This is a Critical Illness policy and does not cover maternity expenses as a benefit.",
+        "Any Critical Illness directly caused by Medical treatment traceable to childbirth (except ectopic pregnancy), miscarriages (unless due to an accident), and lawful medical termination of pregnancy is excluded. (Page 25, General Exclusion 12 & Page 26)"
+      ]
+    },
+    "cataract": {
+      "covered": false, // Cataract is not listed as a covered Critical Illness in this policy (Pages 2-4, List of CIs)
+      "limit_per_eye_inr": null,
+      "limit_per_policy_year_inr": null,
+      "lens_type_coverage": null,
+      "waiting_period_months": null,
+      "conditions_and_notes": [
+        "This is a Critical Illness policy and does not cover cataract as a benefit."
+      ]
+    },
+    "dialysis": {
+      "covered": true, // Page 3, Table, "Kidney failure requiring regular dialysis" is listed as CI #5
+      "limit_details": {
+        "type": "Lumpsum Benefit up to Sum Insured", // Page 2, Section 2.1.a "Diagnosis Benefit"
+        "amount_per_session_inr": null, // Not applicable for a lump sum CI benefit
+        "annual_limit_inr": null, // Benefit is Lumpsum up to Sum Insured
+        "description": "Lumpsum Benefit equal to the Sum Insured specified in the Policy Schedule, for 'Kidney Failure Requiring Regular Dialysis'." // Page 2, Section 2.1.a
+      },
+      "related_to_illness": "Kidney Failure Requiring Regular Dialysis", // Page 13, Section 31.5
+      "waiting_period_months": 3, // Page 2, Section 2.1.a ("after 90 days"); Page 25, Section 4, Item 1 ("within the first 90 days...is excluded")
+      "conditions_and_notes": [
+        "Diagnosis must be 'Kidney Failure Requiring Regular Dialysis' as defined in the policy. (Page 13, Section 31.5)",
+        "Diagnosis must occur after 90 days from policy commencement. (Page 2, Section 2.1.a & Page 25, Section 4, Item 1)",
+        "Survival period (e.g., 30 days or NIL days as opted and mentioned in policy schedule) from date of diagnosis is required. (Page 4, Section 2.1.b)",
+        "The Base cover shall immediately cease to exist for the Insured upon diagnosis of the defined Critical Illness. (Page 4, Section 2.1.c.1)"
+      ]
+    }
+  },
+  "exclusions": {
+    "cancer": [
+      {
+        "type_or_condition": "All tumors which are histologically described as carcinoma in situ, benign, pre-malignant, borderline malignant, low malignant potential, neoplasm of unknown behaviour, or non-invasive",
+        "excluded": true,
+        "unless_condition_met": null,
+        "details": "Including but not limited to: Carcinoma in situ of breasts, Cervical dysplasia CIN-1, CIN-2 and CIN-3. (Page 12, Section 31.1.i)"
+      },
+      {
+        "type_or_condition": "Any non-melanoma skin carcinoma",
+        "excluded": true,
+        "unless_condition_met": "unless there is evidence of metastases to lymph nodes or beyond. (Page 12, Section 31.1.ii)"
+      },
+      {
+        "type_or_condition": "Malignant melanoma that has not caused invasion beyond the epidermis",
+        "excluded": true,
+        "unless_condition_met": null,
+        "details": "(Page 12, Section 31.1.iii)"
+      },
+      {
+        "type_or_condition": "All tumors of the prostate",
+        "excluded": true,
+        "unless_condition_met": "unless histologically classified as having a Gleason score greater than 6 or having progressed to at least clinical TNM classification T2N0M0. (Page 12, Section 31.1.iv)"
+      },
+      {
+        "type_or_condition": "All Thyroid cancers histologically classified as T1N0M0 (TNM classification) or below",
+        "excluded": true,
+        "unless_condition_met": null,
+        "details": "(Page 12, Section 31.1.v)"
+      },
+      {
+        "type_or_condition": "Chronic lymphocytic leukaemia less than RAI stage 3",
+        "excluded": true,
+        "unless_condition_met": null,
+        "details": "(Page 12, Section 31.1.vi)"
+      },
+      {
+        "type_or_condition": "Non-invasive papillary cancer of the bladder histologically described as TaN0M0 or of a lesser classification",
+        "excluded": true,
+        "unless_condition_met": null,
+        "details": "(Page 12, Section 31.1.vii)"
+      },
+      {
+        "type_or_condition": "All Gastro-Intestinal Stromal Tumors histologically classified as T1N0M0 (TNM Classification) or below and with mitotic count of less than or equal to 5/50 HPFs",
+        "excluded": true,
+        "unless_condition_met": null,
+        "details": "(Page 13, Section 31.1.viii)"
+      },
+      {
+        "type_or_condition": "All tumours in the presence of HIV infection",
+        "excluded": true,
+        "unless_condition_met": null,
+        "details": "(Page 13, Section 31.1.ix)"
+      }
+    ],
+    "maternity": [
+      {
+        "condition": "Critical Illness directly caused by Medical treatment traceable to childbirth (including complicated deliveries and caesarean sections incurred during hospitalization)",
+        "excluded": true,
+        "unless_condition_met": "This exclusion does not apply if the Critical Illness is directly caused by medical treatment for ectopic pregnancy. (Page 25, General Exclusion 12)",
+        "details": "Ectopic pregnancy itself is not a listed CI benefit. The exception refers to a CI resulting from its treatment."
+      },
+      {
+        "condition": "Critical Illness directly caused by Medical treatment traceable to miscarriages",
+        "excluded": true,
+        "unless_condition_met": "unless due to an accident. (Page 26, continuation of General Exclusion 12)"
+      },
+      {
+        "condition": "Critical Illness directly caused by Medical treatment traceable to lawful medical termination of pregnancy during the policy period.",
+        "excluded": true,
+        "details": "(Page 26, continuation of General Exclusion 12)"
+      },
+      {
+        "condition": "Critical Illness directly caused by sterility and infertility treatments",
+        "excluded": true,
+        "details": "Includes: Any type of contraception, sterilization; Assisted Reproductive services (IVF, ZIFT, GIFT, ICSI); Gestational Surrogacy; Reversal of sterilization. (Page 26, General Exclusion 20)"
+      }
+    ],
+    "cataract": [
+      {
+        "condition": "Cataract treatment as a Critical Illness benefit",
+        "excluded": true,
+        "details": "Cataract is not a listed Critical Illness under this policy. (Not listed in covered Critical Illnesses, Pages 2-4)"
+      }
+    ],
+    "dialysis": [
+      {
+        "condition": "Dialysis for conditions not classified as 'End Stage Renal Disease', or where kidney failure is not chronic and irreversible, or does not affect both kidneys, or where regular dialysis/renal transplantation has not been instituted.", // More specific about what's lacking
+        "excluded": true,
+        "details": "The policy benefit is for 'Kidney Failure Requiring Regular Dialysis,' defined as end-stage renal disease presenting as chronic irreversible failure of both kidneys to function, as a result of which regular renal dialysis (hemodialysis or peritoneal dialysis) is instituted or renal transplantation is carried out. Diagnosis must be confirmed by a specialist medical practitioner. (Page 13, Section 31.5)" // Provides the full positive definition for clarity
+      },
+      {
+        "condition": "Critical Illness (like Kidney Failure) directly caused due to Alcoholism, non-prescribed drug use or substance abuse",
+        "excluded": true,
+        "details": "(Page 25, General Exclusion 3)"
+      }
+    ]
+  }
+}
