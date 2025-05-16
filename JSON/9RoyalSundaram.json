@@ -1,0 +1,167 @@
+{
+  "policy_info": {
+    "insurance_company_name": "Royal Sundaram General Insurance Co. Limited", // Page 1, Header
+    "policy_name": "Advanced Top Up Health Insurance Plan", // Page 1, Header
+    "uin": "RSAHLIP23029V012223" // Page 1, Footer
+  },
+  "benefits": {
+    "cancer": {
+      "covered": true, // Covered as a Critical Illness (Page 2, C.1.7.1) and under general hospitalization benefits (Page 12, D.1)
+      "limit_details": {
+        "type": "Up to Sum Insured (Lumpsum for CI / Indemnity for Hospitalization)", // Critical Illness is typically lumpsum. Hospitalization is indemnity. Policy is a Top Up, so benefits are over and above deductible.
+        "amount_inr": null, // Depends on Sum Insured chosen
+        "percentage_sum_insured": 1.0,
+        "co_payment_percentage": null, // Not explicitly mentioned for cancer.
+        "description": "Cancer of Specified Severity covered as Critical Illness. Hospitalization for cancer covered up to SI over deductible."
+      },
+      "covered_treatments": [
+        "Malignant tumor treatment (incl. leukemia, lymphoma, sarcoma)", // Page 2, C.1.7.1.I (Definition)
+        "Oral chemotherapy", // Page 13, D.2.D (Modern Treatment)
+        "Immunotherapy - Monoclonal Antibody", // Page 13, D.2.E (Modern Treatment)
+        "Robotic surgeries", // Page 13, D.2.G (Modern Treatment)
+        "Stereotactic radio surgeries", // Page 13, D.2.H (Modern Treatment)
+        "Stem cell therapy (haematological)" // Page 13, D.2.L (Modern Treatment)
+      ],
+      "waiting_period_months": 30, // 30 days initial waiting period (Page 17, E.1.2). Critical Illnesses (like cancer) if not PED would typically fall under this or specific waiting periods if applicable.
+      "waiting_period_months_PED": 36, // Page 17, E.1.1.a
+      "sub_limits_specific_types": [], // Modern treatments are covered up to Sum Insured (Page 13, D.2)
+      "conditions_and_notes": [
+        "Benefits payable over and above the deductible amount. (Page 1, B Preamble)",
+        "Initial 30-day waiting for any illness (non-accidental). (Page 17, E.1.2)",
+        "Definition of 'Cancer of Specified Severity' with its own exclusions applies for CI benefit. (Page 2, C.1.7.1)"
+      ]
+    },
+    "maternity": {
+      "covered": false, // Explicitly excluded (Page 19, E.1.18)
+      "limit_details_normal_delivery_inr": null,
+      "limit_details_c_section_inr": null,
+      "pre_post_natal_expenses_covered": false,
+      "pre_post_natal_limit_inr": null,
+      "new_born_baby_cover_included": false,
+      "new_born_baby_limit_inr": null,
+      "new_born_baby_vaccination_covered": false,
+      "waiting_period_months": null,
+      "waiting_period_months_PED": null,
+      "max_deliveries_covered": null,
+      "age_limit_for_mother": null,
+      "conditions_and_notes": [
+        "Maternity Expenses (childbirth, miscarriage unless accidental, lawful MTP) are excluded. (Page 19, E.1.18)",
+        "Ectopic pregnancy is an exception to the exclusion (i.e., covered if it meets policy terms). (Page 19, E.1.18.i)"
+      ]
+    },
+    "cataract": {
+      "covered": true, // Listed under Specific Waiting Period conditions (Page 17, E.1.3.f.a)
+      "limit_per_eye_inr": null, // No specific sub-limit per eye mentioned; covered up to Sum Insured over deductible.
+      "limit_per_policy_year_inr": null, // Covered up to Sum Insured over deductible.
+      "lens_type_coverage": "Standard lens cost likely covered.", // Not specified.
+      "waiting_period_months": 24, // Page 17, E.1.3.a (Specific Waiting Period)
+      "waiting_period_months_PED": 36, // Page 17, E.1.1.a (PED is 36 months. Specific wait for Cataract is 24 months. Longer applies for PED).
+      "conditions_and_notes": [
+        "Benefits payable over and above the deductible amount. (Page 1, B Preamble)",
+        "Refractive error correction < 7.5 dioptres excluded. (Page 19, E.1.15)"
+      ]
+    },
+    "dialysis": {
+      "covered": true, // Kidney Failure Requiring Regular Dialysis is a Critical Illness (Page 4, C.1.7.6). Also covered under general hospitalization (Page 13, D.1.iv).
+      "limit_details": {
+        "type": "Up to Sum Insured (Lumpsum for CI / Indemnity for Hospitalization)", // Page 4, C.1.7.6 for CI; Page 12, D.1 for Hospitalization
+        "amount_per_session_inr": null,
+        "annual_limit_inr": null, // Covered up to Sum Insured over deductible
+        "co_payment_percentage": null,
+        "description": "Kidney Failure Requiring Regular Dialysis covered as CI. Dialysis also covered under hospitalization over deductible."
+      },
+      "related_to_illness": "Kidney Failure Requiring Regular Dialysis / Chronic Renal Failure", // Page 4, C.1.7.6; Page 18, E.1.3.f.p
+      "waiting_period_months": 24, // Chronic Renal Failure has 24-month specific waiting period (Page 18, E.1.3.f.p)
+      "waiting_period_months_PED": 36, // Page 17, E.1.1.a
+      "conditions_and_notes": [
+        "Benefits payable over and above the deductible amount. (Page 1, B Preamble)",
+        "Initial 30-day waiting for any illness (non-accidental). (Page 17, E.1.2)"
+      ]
+    }
+  },
+  "exclusions": {
+    "cancer": [
+      {
+        "type_or_condition": "Carcinoma in situ, benign, pre-malignant tumors etc.", // Page 2, C.1.7.1.II.i
+        "excluded": true,
+        "details": "Full list of histologically excluded tumor types in 'Cancer of Specified Severity' CI definition."
+      },
+      {
+        "type_or_condition": "Non-melanoma skin carcinoma (unless metastasized)", // Page 2, C.1.7.1.II.ii
+        "excluded": true,
+        "unless_condition_met": "Evidence of metastases to lymph nodes or beyond."
+      },
+      {
+        "type_or_condition": "Malignant melanoma not invading beyond epidermis", // Page 2, C.1.7.1.II.iii
+        "excluded": true
+      },
+      {
+        "type_or_condition": "Prostate tumors not meeting Gleason score >6 or TNM T2N0M0", // Page 2, C.1.7.1.II.iv
+        "excluded": true
+      },
+      {
+        "type_or_condition": "Thyroid cancers T1N0M0 or below", // Page 3, C.1.7.1.II.v
+        "excluded": true
+      },
+      {
+        "type_or_condition": "Chronic lymphocytic leukaemia < RAI stage 3", // Page 3, C.1.7.1.II.vi
+        "excluded": true
+      },
+      {
+        "type_or_condition": "Non-invasive papillary bladder cancer TaN0M0 or lesser", // Page 3, C.1.7.1.II.vii
+        "excluded": true
+      },
+      {
+        "type_or_condition": "Gastro-Intestinal Stromal Tumors T1N0M0 or below, mitotic count ≤5/50 HPFs", // Page 3, C.1.7.1.II.viii
+        "excluded": true
+      },
+      {
+        "type_or_condition": "Tumors in presence of HIV infection", // Page 3, C.1.7.1.II.ix
+        "excluded": true
+      },
+      {
+        "type_or_condition": "Unproven cancer treatments", // Page 10, C.1.41; Page 19, E.1.16
+        "excluded": true
+      }
+    ],
+    "maternity": [
+      {
+        "condition": "All maternity expenses (childbirth, C-sections, miscarriage unless accidental, lawful MTP)", // Page 19, E.1.18
+        "excluded": true,
+        "unless_condition_met": "Ectopic pregnancy treatment is covered (exception to exclusion)."
+      },
+      {
+        "condition": "Sterility and Infertility treatments", // Page 19, E.1.17
+        "excluded": true,
+        "details": "Includes contraception, sterilization, ART (IVF, etc.), gestational surrogacy, reversal of sterilization."
+      }
+    ],
+    "cataract": [
+      {
+        "condition": "Claims within 24-month waiting period", // Page 17, E.1.3.a & E.1.3.f.a
+        "excluded": true,
+        "unless_condition_met": "Claim arising due to an Accident."
+      },
+      {
+        "condition": "Refractive error correction < 7.5 dioptres", // Page 19, E.1.15
+        "excluded": true
+      }
+    ],
+    "dialysis": [
+      {
+        "condition": "Claims for Chronic Renal Failure within 24-month waiting period", // Page 18, E.1.3.f.p
+        "excluded": true,
+        "unless_condition_met": "Claim arising due to an Accident."
+      },
+      {
+        "condition": "Dialysis for kidney conditions not meeting 'Kidney Failure Requiring Regular Dialysis' (CI definition) or not requiring medically necessary hospitalization", // Inferred from CI definition & general scope
+        "excluded": true,
+        "details": "CI benefit has specific definition (Page 4, C.1.7.6). Hospitalization must be medically necessary."
+      },
+      {
+        "condition": "Unproven treatments including experimental dialysis", // Page 10, C.1.41; Page 19, E.1.16
+        "excluded": true
+      }
+    ]
+  }
+}

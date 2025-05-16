@@ -1,0 +1,188 @@
+{
+  "policy_info": {
+    "insurance_company_name": "THE NEW INDIA ASSURANCE CO. LTD.", // Page 1, Header
+    "policy_name": "YUVA BHARAT HEALTH POLICY", // Page 1, Header
+    "uin": "NIAHLIP22025V012223" // Page 1, Footer
+  },
+  "benefits": {
+    "cancer": {
+      "covered": true, // Cancer of Specified Severity is a Critical Illness (Page 3, 2.8.1). Critical Care Benefit is part of Gold/Platinum plans (Page 1, Point 2 & Page 19, 3.17). General hospitalization covers cancer treatment (Page 1, Preamble & Page 13, 3.1). Modern treatments for cancer also covered (Page 17, 3.11).
+      "limit_details": {
+        "type": "Up to Sum Insured (Hospitalization) / Specific Lumpsum (Critical Illness Benefit)", // Page 13, 3.1 for hospitalization; Page 19, 3.17 for Critical Care Benefit
+        "amount_inr": null, // For Critical Illness: Rs. 1L/1.5L/2.5L based on SI (Page 19, 3.17). For hospitalization, up to SI.
+        "percentage_sum_insured": null, // For Critical Illness, it's a fixed amount. For hospitalization, it's 1.0 of SI.
+        "co_payment_percentage": null, // No specific co-payment mentioned for cancer. Zone-based co-pay may apply (Page 37, 5.29).
+        "description": "Hospitalization for cancer covered up to Sum Insured. Critical Care Benefit (lumpsum) available in Gold/Platinum plans. Modern treatments have sub-limits."
+      },
+      "covered_treatments": [
+        "Hospitalization for cancer treatment", // Page 13, 3.1
+        "Leukemia", // Page 3, 2.8.1 (Definition of Cancer)
+        "Lymphoma", // Page 3, 2.8.1 (Definition of Cancer)
+        "Sarcoma", // Page 3, 2.8.1 (Definition of Cancer)
+        "Oral chemotherapy (sub-limit)", // Page 17, 3.11.4
+        "Immunotherapy - Monoclonal Antibody (sub-limit)", // Page 17, 3.11.5
+        "Robotic surgeries (sub-limit)", // Page 17, 3.11.7
+        "Stereotactic radio surgeries (sub-limit)", // Page 17, 3.11.8
+        "Stem cell therapy (haematological, sub-limit)" // Page 17, 3.11.12
+      ],
+      "waiting_period_months": 0.98, // 90 days (approx 3 months) for Cardiac Conditions, Diabetes, Hypertension which can be co-morbidities. Cancer itself, if not PED, primarily subject to 30-day initial wait (Page 25, 4.3). Critical Care Benefit has 12-month wait (Page 19, Conditions).
+      "waiting_period_months_PED": 24, // Page 23, 4.1.a
+      "sub_limits_specific_types": [
+        {
+          "cancer_type": "Oral chemotherapy (SI 5/10/15L)", // Page 17, 3.11.4
+          "limit_amount_inr": 50000
+        },
+        {
+          "cancer_type": "Oral chemotherapy (SI 25L)", // Page 17, 3.11.4
+          "limit_amount_inr": 75000
+        },
+        {
+          "cancer_type": "Oral chemotherapy (SI 50L)", // Page 17, 3.11.4
+          "limit_amount_inr": 100000
+        }
+      ],
+      "conditions_and_notes": [
+        "Critical Care Benefit (if Gold/Platinum plan) has 12-month waiting period. (Page 19, Conditions)",
+        "Initial 30-day waiting for any illness (non-accidental). (Page 25, 4.3)",
+        "90-day waiting for Diabetes, Hypertension, Cardiac Conditions. (Page 24, 4.2.i)",
+        "Modern treatments have specific sub-limits. (Page 17, 3.11)",
+        "Zone-based co-payment may apply if treatment taken in higher zone. (Page 37, 5.29.b)"
+      ]
+    },
+    "maternity": {
+      "covered": true, // Only in Platinum Plan (Page 1, Point 3 & Page 21, 3.21)
+      "limit_details_normal_delivery_inr": 25000, // Page 21, 3.21.A (single baby)
+      "limit_details_c_section_inr": 25000, // Page 21, 3.21.A (single baby, limit is for maternity expenses)
+      "pre_post_natal_expenses_covered": false, // Explicitly "Expenses incurred towards post-natal care, pre-term or pre-mature care shall not be covered." (Page 19, 3.16 - referring to New Born, but 3.21 is specific for Maternity Expenses). The benefit is for "Maternity Expenses".
+      "pre_post_natal_limit_inr": null,
+      "new_born_baby_cover_included": true, // Page 1, Base Plan includes "New Born Baby Coverage" (3.16); Platinum Plan has "Well baby Cover" (3.23)
+      "new_born_baby_limit_inr": null, // New Born (3.16) covered within mother's SI. Well Baby (3.23) covers Pre-mature/Pre-term baby with specific limits.
+      "new_born_baby_vaccination_covered": true, // Page 22, 3.23.B (Well Baby Cover - Vaccination Expenses)
+      "waiting_period_months": 24, // Page 21, 3.21.A & Page 25 (iii)
+      "waiting_period_months_PED": null, // Not applicable as it's a benefit with its own waiting period.
+      "max_deliveries_covered": 2, // Page 21, 3.21.A.ii (liability limited to two claims)
+      "age_limit_for_mother": null, // Not specified
+      "conditions_and_notes": [
+        "Maternity Coverage available only in Platinum Plan. (Page 1, Point 3)",
+        "Limit Rs. 25,000 (single baby), Rs. 37,500 (twin babies). (Page 21, 3.21.A)",
+        "Enhanced Maternity Limit optional at additional premium. (Page 1, Note & Page 21, 3.21.B)",
+        "Expenses must be incurred in Hospital as in-patient in India. (Page 21, 3.21.A.i)",
+        "Well Baby Cover for Pre-mature/Pre-term baby up to Rs. 30K/40K/50K based on SI. (Page 22, 3.23.A)",
+        "New Born Baby vaccination up to 0.1% of SI per policy period. (Page 22, 3.23.B)"
+      ]
+    },
+    "cataract": {
+      "covered": true, // Page 1, Base Plan includes "Coverage For Cataract"
+      "limit_per_eye_inr": null, // Varies: Rs. 50K/75K/1L per eye based on SI (Page 15, 3.8)
+      "limit_per_policy_year_inr": null, // Per-eye limit applies.
+      "lens_type_coverage": "Standard lens cost within sub-limit likely covered.", // Not specified
+      "waiting_period_months": 12, // Page 24, 4.2 (ii).4
+      "waiting_period_months_PED": 24, // Page 23, 4.1.a (PED is 24 months, specific wait is 12, so longer applies - 24 months for PED cataract)
+      "conditions_and_notes": [
+        "Per-eye sub-limit applies: Rs. 50K (SI 5/10/15L), Rs. 75K (SI 25L), Rs. 1L (SI 50L). (Page 15, 3.8)",
+        "Zone-based co-payment may apply. (Page 37, 5.29.b)"
+      ]
+    },
+    "dialysis": {
+      "covered": true, // Page 14, 3.1 (c) "Associate Medical Expenses...such as Dialysis"
+      "limit_details": {
+        "type": "Up to Sum Insured", // Part of hospitalization expenses (Page 13, 3.1)
+        "amount_per_session_inr": null,
+        "annual_limit_inr": null, // Up to Annual Sum Insured
+        "co_payment_percentage": null, // Zone-based co-pay may apply (Page 37, 5.29)
+        "description": "Covered as part of Associate Medical Expenses under hospitalization."
+      },
+      "related_to_illness": "Kidney Failure Requiring Regular Dialysis / Renal Failure", // Critical Illness definition (Page 4, 2.8.6); Specific Waiting Period list (Page 24, 4.2.ii.18)
+      "waiting_period_months": 12, // Page 24, 4.2 (ii).18 "Renal Failure"
+      "waiting_period_months_PED": 24, // Page 23, 4.1.a (PED is 24 months, specific wait is 12, so longer applies - 24 months for PED renal failure)
+      "conditions_and_notes": [
+        "Zone-based co-payment may apply. (Page 37, 5.29.b)",
+        "Initial 30-day waiting for any illness (non-accidental). (Page 25, 4.3)"
+      ]
+    }
+  },
+  "exclusions": {
+    "cancer": [
+      {
+        "type_or_condition": "Carcinoma in situ, benign, pre-malignant tumors etc.", // Page 3, 2.8.1.II.i
+        "excluded": true,
+        "details": "Full list of histologically excluded tumor types in policy definition."
+      },
+      {
+        "type_or_condition": "Non-melanoma skin carcinoma", // Page 3, 2.8.1.II.ii
+        "excluded": true,
+        "unless_condition_met": "Evidence of metastases to lymph nodes or beyond."
+      },
+      {
+        "type_or_condition": "Malignant melanoma not invading beyond epidermis", // Page 3, 2.8.1.II.iii
+        "excluded": true
+      },
+      {
+        "type_or_condition": "Prostate tumors not meeting Gleason score >6 or TNM T2N0M0", // Page 3, 2.8.1.II.iv
+        "excluded": true
+      },
+      {
+        "type_or_condition": "Thyroid cancers T1N0M0 or below", // Page 3, 2.8.1.II.v
+        "excluded": true
+      },
+      {
+        "type_or_condition": "Chronic lymphocytic leukaemia < RAI stage 3", // Page 3, 2.8.1.II.vi
+        "excluded": true
+      },
+      {
+        "type_or_condition": "Non-invasive papillary bladder cancer TaN0M0 or lesser", // Page 3, 2.8.1.II.vii
+        "excluded": true
+      },
+      {
+        "type_or_condition": "Gastro-Intestinal Stromal Tumors T1N0M0 or below, mitotic count ≤5/50 HPFs", // Page 3, 2.8.1.II.viii
+        "excluded": true
+      },
+      {
+        "type_or_condition": "Tumors in presence of HIV infection", // Page 3, 2.8.1.II.ix
+        "excluded": true
+      }
+    ],
+    "maternity": [
+      {
+        "condition": "Maternity expenses if not opted for Platinum Plan", // Implicit from plan structure (Page 1)
+        "excluded": true
+      },
+      {
+        "condition": "Claims within 24-month waiting period for Maternity Coverage", // Page 21, 3.21.A
+        "excluded": true
+      },
+      {
+        "condition": "Expenses for post-natal care, pre-term/pre-mature care (under basic Maternity Expenses 3.21)", // Page 19, 3.16 (clarified as not covered for New Born, implies for mother too under basic maternity). Well Baby Cover (3.23) covers pre-mature baby.
+        "excluded": true
+      },
+      {
+        "condition": "More than two maternity claims in a lifetime", // Page 21, 3.21.A.ii
+        "excluded": true
+      }
+    ],
+    "cataract": [
+      {
+        "condition": "Claims within 12-month waiting period for Cataract", // Page 24, 4.2 (ii).4
+        "excluded": true,
+        "unless_condition_met": "Claim arising due to an accident."
+      },
+      {
+        "condition": "Refractive error correction < 7.5 dioptres", // Page 26, 4.4.12
+        "excluded": true,
+        "details": "General exclusion; cataract surgery often corrects vision."
+      }
+    ],
+    "dialysis": [
+      {
+        "condition": "Renal Failure claims within 12-month waiting period", // Page 24, 4.2 (ii).18
+        "excluded": true,
+        "unless_condition_met": "Claim arising due to an accident."
+      },
+      {
+        "condition": "Dialysis for conditions not meeting 'Renal Failure' or other covered kidney disease definitions", // Inferred from positive coverage scope.
+        "excluded": true,
+        "details": "Benefit tied to specific diagnosed conditions."
+      }
+    ]
+  }
+}

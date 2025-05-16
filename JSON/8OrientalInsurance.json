@@ -1,0 +1,181 @@
+{
+  "policy_info": {
+    "insurance_company_name": "THE ORIENTAL INSURANCE COMPANY LIMITED", // Page 1, Header
+    "policy_name": "HAPPY FAMILY FLOATER POLICY 2021", // Page 1, Header
+    "uin": "OICHLIP22010V042223" // Page 1, Footer
+  },
+  "benefits": {
+    "cancer": {
+      "covered": true, // Cancer is covered under hospitalization benefits (Page 1, Preamble). Critical Illnesses are defined (Page 19, 3.2.3 A). Advanced treatments for cancer are also covered (Page 16, 3.1.16).
+      "limit_details": {
+        "type": "Up to Sum Insured (Hospitalization) / Sub-limit for Advanced Treatments", // Page 1, Preamble; Page 16 for Advanced Treatment sub-limits
+        "amount_inr": null, // For hospitalization up to SI. Advanced treatments have specific sub-limits.
+        "percentage_sum_insured": 1.0, // For general hospitalization
+        "co_payment_percentage": 0.1, // Compulsory 10% co-payment for Silver Plan (Page 11, xxi & Page 27, 4.40). Optional waiver available (Page 19, E).
+        "description": "Hospitalization for cancer covered up to Sum Insured. Advanced treatments like chemo, robotic surgery have sub-limits. (Page 16, 3.1.16)"
+      },
+      "covered_treatments": [
+        "Hospitalization for cancer treatment", // Page 1, Preamble
+        "Chemotherapy (as part of hospitalization or advanced treatment)", // Page 8, v; Page 16, D. Oral Chemotherapy
+        "Radiotherapy (as part of hospitalization or advanced treatment)", // Page 8, v; Page 16, H. Stereotactic radio surgeries
+        "Surgical Treatment for Cancer", // Page 1, Preamble (surgical treatment)
+        "Robotic surgeries (sub-limit)", // Page 16, G
+        "Immunotherapy - Monoclonal Antibody (sub-limit)", // Page 16, E
+        "Stem cell therapy (haematological, sub-limit)" // Page 16, L
+      ],
+      "waiting_period_months": 24, // For Critical Illnesses if defined as such (no specific waiting period for 'cancer' as a general illness beyond initial 30 days, but Critical Illness definitions often have their own waiting periods or apply under PED). Malignant neoplasms have a 2-year wait for treatment of certain related conditions. (Page 21-22 list)
+      "waiting_period_months_PED": 48, // Page 21, 4.1 A
+      "sub_limits_specific_types": [
+        {
+          "cancer_type": "Oral chemotherapy (SI Rs.1.0 lac to Rs. 10.0 lacs)", // Page 16, D
+          "limit_amount_inr": 50000 // Per policy period: 25% of SI, subject to maximum INR 50,000
+        },
+        {
+          "cancer_type": "Oral chemotherapy (SI Rs.12.0 lac to Rs. 50.0 lacs)", // Page 16, D
+          "limit_amount_inr": 150000 // Per policy period: Up to INR 1,50,000
+        }
+      ],
+      "conditions_and_notes": [
+        "10% co-payment for Silver Plan unless waived. (Page 11, xxi; Page 19, E)",
+        "Initial 30-day waiting for any illness (non-accidental). (Page 22, 5.1)",
+        "Advanced treatments have specific sub-limits based on SI. (Page 16)",
+        "Cancer of Specified Severity (Critical Illness definition on Page 19, 3.2.3.A) has its own conditions if claimed as Critical Illness."
+      ]
+    },
+    "maternity": {
+      "covered": true, // Page 9, ix (Diamond & Platinum Plans)
+      "limit_details_normal_delivery_inr": null, // Covered up to 2.5% of Sum Insured (Page 9, ix)
+      "limit_details_c_section_inr": null, // Covered up to 2.5% of Sum Insured (Page 9, ix)
+      "pre_post_natal_expenses_covered": false, // Page 13, Special conditions iii
+      "pre_post_natal_limit_inr": null,
+      "new_born_baby_cover_included": true, // Page 10, x (Diamond & Platinum Plans)
+      "new_born_baby_limit_inr": null, // Up to 2.5% of Sum Insured (Page 10, x)
+      "new_born_baby_vaccination_covered": false, // Vaccination not specified under New Born Baby cover. Anti-rabies/Maternity vaccination covered under specific clauses (Page 24, 4.24)
+      "waiting_period_months": 24, // Page 9, ix (Diamond & Platinum Plans)
+      "waiting_period_months_PED": null, // Maternity is a benefit with its own waiting period.
+      "max_deliveries_covered": 2, // Page 9, ix (limited to two deliveries or terminations)
+      "age_limit_for_mother": null, // Not specified
+      "conditions_and_notes": [
+        "Available only in Diamond & Platinum Plans. (Page 9, ix)",
+        "Maternity expenses limited to 2.5% of SI. (Page 9, ix)",
+        "New Born Baby cover up to 2.5% of SI, up to 90 days. (Page 10, x)",
+        "Pre/Post-natal expenses not covered unless admitted. (Page 13, iii)"
+      ]
+    },
+    "cataract": {
+      "covered": true, // Listed as a Day Care Procedure (Page 37, D.31).
+      "limit_per_eye_inr": null, // No specific sub-limit mentioned per eye; general hospitalization limits apply.
+      "limit_per_policy_year_inr": null, // Covered up to Sum Insured.
+      "lens_type_coverage": "Standard lens cost likely covered.", // Not specified for lens types.
+      "waiting_period_months": 2, // Cataract has a 2-year waiting period (Page 22, vii). The template uses months, so 24 months.
+      "waiting_period_months_PED": 48, // Page 21, 4.1 A (PED is 48 months. Specific wait for Cataract is 2 years. Longer applies for PED).
+      "conditions_and_notes": [
+        "2-year waiting period. (Page 22, vii)",
+        "Refractive error correction less than 7.5 diopters excluded. (Page 23, 5.13)",
+        "10% co-payment for Silver Plan. (Page 11, xxi)"
+      ]
+    },
+    "dialysis": {
+      "covered": true, // Page 8, v (listed under hospitalization expenses)
+      "limit_details": {
+        "type": "Up to Sum Insured", // Part of hospitalization expenses (Page 8, v)
+        "amount_per_session_inr": null,
+        "annual_limit_inr": null, // Up to Annual Sum Insured
+        "co_payment_percentage": 0.1, // Page 11, xxi & Page 27, 4.40 (Silver Plan)
+        "description": "Covered as part of general hospitalization expenses."
+      },
+      "related_to_illness": "Kidney Failure Requiring Regular Dialysis (Critical Illness definition)", // Page 20, F. Also Renal Failure as a specific waiting period condition (Page 22)
+      "waiting_period_months": 24, // "Renal Failure" has a 2-year waiting period. (Page 22 - inferred from list, not explicitly stated for dialysis itself but for the underlying common cause)
+      "waiting_period_months_PED": 48, // Page 21, 4.1 A
+      "conditions_and_notes": [
+        "10% co-payment for Silver Plan. (Page 11, xxi)",
+        "Initial 30-day waiting for any illness (non-accidental). (Page 22, 5.1)"
+      ]
+    }
+  },
+  "exclusions": {
+    "cancer": [
+      {
+        "type_or_condition": "Tumors showing malignant changes of carcinoma in situ / pre-malignant / non-invasive", // Page 19, 3.2.3 A.i
+        "excluded": true,
+        "details": "Exclusion from 'Cancer of Specified Severity' definition."
+      },
+      {
+        "type_or_condition": "Skin cancer other than invasive malignant melanoma", // Page 19, 3.2.3 A.ii
+        "excluded": true
+      },
+      {
+        "type_or_condition": "Prostate tumors not meeting Gleason score >6 or TNM T2N0M0", // Page 19, 3.2.3 A.iii
+        "excluded": true
+      },
+      {
+        "type_or_condition": "Papillary micro-carcinoma of thyroid <1cm", // Page 19, 3.2.3 A.iv
+        "excluded": true
+      },
+      {
+        "type_or_condition": "Chronic lymphocytic leukemia < RAI stage 3", // Page 19, 3.2.3 A.v
+        "excluded": true
+      },
+      {
+        "type_or_condition": "Micro carcinoma of the bladder", // Page 19, 3.2.3 A.vi
+        "excluded": true
+      },
+      {
+        "type_or_condition": "Unproven cancer treatments", // Page 24, 5.14 (Code-ExcI16)
+        "excluded": true
+      }
+    ],
+    "maternity": [
+      {
+        "condition": "Maternity expenses if not Diamond or Platinum Plan", // Page 9, ix
+        "excluded": true
+      },
+      {
+        "condition": "Claims within 24-month waiting period", // Page 9, ix
+        "excluded": true
+      },
+      {
+        "condition": "More than two deliveries/terminations in lifetime", // Page 9, ix
+        "excluded": true
+      },
+      {
+        "condition": "Voluntary medical termination of pregnancy during first 12 weeks (unless medically necessary)", // Page 13, ii (This is nuanced, main maternity exclusion on P24, 5.16 refers to Diamond/Platinum but P13 is a general special condition for maternity cover)
+        "excluded": true
+      },
+      {
+        "condition": "Pre-natal and post-natal expenses unless admitted in Hospital", // Page 13, iii
+        "excluded": true
+      },
+      {
+        "condition": "Sterility and Infertility treatments (except ART under Platinum Plan)", // Page 24, 5.15
+        "excluded": true,
+        "unless_condition_met": "Assisted Reproduction Treatment (ART) is covered under Platinum Plan up to limits after 36 months (Page 13, 3.1.5)."
+      }
+    ],
+    "cataract": [
+      {
+        "condition": "Claims within 2-year waiting period", // Page 22, vii
+        "excluded": true
+      },
+      {
+        "condition": "Refractive error correction < 7.5 diopters", // Page 23, 5.13
+        "excluded": true
+      }
+    ],
+    "dialysis": [
+      {
+        "condition": "Claims for Renal Failure within 2-year waiting period", // Page 22, specific waiting periods (assuming dialysis is for renal failure)
+        "excluded": true
+      },
+      {
+        "condition": "Dialysis for conditions not meeting policy's coverage terms for kidney disease", // Inferred from positive coverage scope
+        "excluded": true,
+        "details": "Must be for a covered illness requiring hospitalization."
+      },
+      {
+        "condition": "Unproven treatments including experimental dialysis", // Page 24, 5.14
+        "excluded": true
+      }
+    ]
+  }
+}

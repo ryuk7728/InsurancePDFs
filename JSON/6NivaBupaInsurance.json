@@ -1,0 +1,149 @@
+{
+  "policy_info": {
+    "insurance_company_name": "Niva Bupa Health Insurance Limited", // Page 5, Section 2.66
+    "policy_name": "TravelAssure", // Page 1, Footer
+    "uin": "NBHTIOP22148V012122" // Page 1, Footer
+  },
+  "benefits": {
+    "cancer": {
+      "covered": true, // Cancer is covered under "Emergency In-patient medical treatment" (Page 5, Section 3.1) if it's an emergency arising during travel. Specific "Cancer Screening and Mammography Examinations" benefit also exists (Page 15, Section 4.34).
+      "limit_details": {
+        "type": "Up to Sum Insured", // Page 5, Section 3.1 for Emergency In-patient; Cancer screening benefit is reimbursement of expenses.
+        "amount_inr": null, // Depends on Sum Insured chosen for emergency treatment. Screening benefit is reimbursement.
+        "percentage_sum_insured": 1.0, // For emergency in-patient treatment.
+        "co_payment_percentage": null, // Not explicitly stated for cancer. Optional co-payment of 20% can be selected for all claims (Page 16, Section 4.37).
+        "description": "Emergency cancer treatment covered up to Sum Insured. Cancer screening and mammography exams also covered as a separate benefit."
+      },
+      "covered_treatments": [
+        "Emergency In-patient medical treatment for cancer", // Page 5, Section 3.1
+        "Cancer Screening examinations", // Page 15, Section 4.34
+        "Mammography Examinations" // Page 15, Section 4.34
+      ],
+      "waiting_period_months": 0, // This is a travel insurance policy; waiting periods like 30-day/1-2 years typically don't apply for emergency medical treatment abroad. PEDs are generally excluded unless specific cover is opted.
+      "waiting_period_months_PED": null, // Generally PEDs are not covered (Page 17, General Exclusion 14: Medical tourism). However, "Complete pre-existing disease cover" is an optional benefit (Page 16, Section 4.41) which would cover PEDs up to the emergency inpatient SI.
+      "sub_limits_specific_types": [],
+      "conditions_and_notes": [
+        "Coverage for cancer primarily relates to emergency medical treatment during travel.",
+        "Cancer screening and mammography must be prescribed by a medical practitioner. (Page 16, Section 4.34.1)",
+        "Screening benefit available for student visa holders for full-time college/school. (Page 16, Section 4.34.2)",
+        "Standard exclusions apply, e.g., medical tourism, unproven treatments. (Page 17, Section 5)",
+        "Claim deductible applies as per policy schedule. (Page 5, Section 3.1)",
+        "Optional 20% co-payment can be selected. (Page 16, Section 4.37)"
+      ]
+    },
+    "maternity": {
+      "covered": true, // Page 6, Section 3.2 "Maternity"
+      "limit_details_normal_delivery_inr": null, // Covered under overall "Maternity" sum insured stated in policy schedule.
+      "limit_details_c_section_inr": null, // Covered under overall "Maternity" sum insured stated in policy schedule.
+      "pre_post_natal_expenses_covered": false, // The benefit focuses on delivery and LMT. Pre/post-natal explicitly covered for these events only.
+      "pre_post_natal_limit_inr": null,
+      "new_born_baby_cover_included": true, // Page 6, Section 3.3 "New born baby cover"
+      "new_born_baby_limit_inr": null, // Uses sum insured of "maternity" benefit (Page 6, Section 3.3.1)
+      "new_born_baby_vaccination_covered": true, // Page 6, Section 3.3 "vaccination expenses of new born baby will be covered"
+      "waiting_period_months": 24, // Page 6, Section 3.2.2
+      "waiting_period_months_PED": null, // Maternity is not a PED in the traditional sense; waiting period applies regardless.
+      "max_deliveries_covered": 2, // Inferred from "This benefit can be used only twice during the insured person’s lifetime" (Page 6, Section 3.2.4)
+      "age_limit_for_mother": null, // Not specified.
+      "conditions_and_notes": [
+        "Insured Person must not be pregnant at policy commencement. (Page 6, Section 3.2.1)",
+        "Clause 5 of General exclusions waived. (Page 6, Section 3.2.3)",
+        "Available for student visa holders (policy term ≥ 12 months). (Page 6, Section 3.2.5)",
+        "New born baby vaccination up to USD 500. (Page 6, Section 3.3.2)",
+        "Claim deductible applies as per policy schedule. (Page 6, Section 3.2)"
+      ]
+    },
+    "cataract": {
+      "covered": false, // Not listed as a covered benefit. This is a travel insurance policy focused on emergencies.
+      "limit_per_eye_inr": null,
+      "limit_per_policy_year_inr": null,
+      "lens_type_coverage": null,
+      "waiting_period_months": null,
+      "waiting_period_months_PED": null,
+      "conditions_and_notes": [
+        "Cataract treatment is generally not an emergency covered under travel insurance unless it's an acute, unforeseen complication requiring immediate attention during travel."
+      ]
+    },
+    "dialysis": {
+      "covered": true, // Covered under "Emergency In-patient medical treatment" (Page 5, Section 3.1) if it's an emergency for a covered condition during travel.
+      "limit_details": {
+        "type": "Up to Sum Insured", // Page 5, Section 3.1
+        "amount_per_session_inr": null,
+        "annual_limit_inr": null, // As per emergency in-patient Sum Insured
+        "co_payment_percentage": null, // Optional 20% co-payment can be selected (Page 16, Section 4.37)
+        "description": "Covered if it's an emergency medical necessity during travel for a covered condition."
+      },
+      "related_to_illness": "Emergency kidney condition requiring dialysis during travel",
+      "waiting_period_months": 0, // Travel insurance, emergency cover.
+      "waiting_period_months_PED": null, // PEDs generally excluded unless "Complete pre-existing disease cover" (Page 16, Section 4.41) is opted.
+      "conditions_and_notes": [
+        "Must be an emergency and medically necessary during the trip.",
+        "Claim deductible applies as per policy schedule. (Page 5, Section 3.1)",
+        "Excludes treatment if trip was planned for medical tourism. (Page 17, General Exclusion 14)"
+      ]
+    }
+  },
+  "exclusions": {
+    "cancer": [
+      {
+        "type_or_condition": "Treatment sought for pre-existing cancer (unless PED cover opted)", // Page 17, General Exclusion 14 (Medical tourism); Page 22, Section 6.20 (PED for International single/multi-trip)
+        "excluded": true,
+        "unless_condition_met": "If 'Complete pre-existing disease cover' optional benefit is active (Page 16, Section 4.41) for up to 5% of emergency inpatient SI (max $2500) for life-threatening PED."
+      },
+      {
+        "type_or_condition": "Unproven cancer treatments", // Page 17, General Exclusion 6
+        "excluded": true,
+        "details": "Lacks significant medical documentation for effectiveness."
+      },
+      {
+        "type_or_condition": "Cosmetic surgery related to cancer (unless reconstructive and medically necessary)", // Page 17, General Exclusion 16
+        "excluded": true,
+        "unless_condition_met": "Reconstruction following cancer or as medically necessary treatment."
+      }
+    ],
+    "maternity": [
+      {
+        "condition": "Maternity expenses if pregnant at policy commencement", // Page 6, Section 3.2.1
+        "excluded": true,
+        "details": "A specific condition for the maternity benefit."
+      },
+      {
+        "condition": "Maternity claims beyond the 24-month waiting period", // Page 6, Section 3.2.2
+        "excluded": true,
+        "details": "A waiting period applies to the maternity benefit."
+      },
+      {
+        "condition": "Maternity expenses if not on a student visa (policy term < 12 months)", // Page 6, Section 3.2.5
+        "excluded": true,
+        "details": "Benefit linked to specific visa/policy term conditions."
+      }
+    ],
+    "cataract": [
+      {
+        "condition": "Non-emergency, planned cataract surgery", // Inferred as this is travel insurance for emergencies.
+        "excluded": true,
+        "details": "Policy covers emergency medical treatment during travel. (Page 5, Section 3.1)"
+      },
+      {
+        "condition": "Cataract as a pre-existing condition (unless PED cover opted and life-threatening)", // Page 22, Section 6.20
+        "excluded": true,
+        "unless_condition_met": "If 'Complete pre-existing disease cover' is active and condition becomes life-threatening during travel."
+      }
+    ],
+    "dialysis": [
+      {
+        "condition": "Dialysis for pre-existing kidney disease (unless PED cover opted and life-threatening)", // Page 22, Section 6.20
+        "excluded": true,
+        "unless_condition_met": "If 'Complete pre-existing disease cover' is active and condition becomes life-threatening requiring emergency dialysis."
+      },
+      {
+        "condition": "Routine, planned dialysis sessions during travel", // Inferred. Policy for emergencies.
+        "excluded": true,
+        "details": "Travel insurance typically does not cover ongoing maintenance for chronic conditions."
+      },
+      {
+        "condition": "Trip planned for obtaining dialysis (Medical tourism)", // Page 17, General Exclusion 14
+        "excluded": true
+      }
+    ]
+  }
+}

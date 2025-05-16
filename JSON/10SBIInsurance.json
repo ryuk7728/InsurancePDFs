@@ -1,0 +1,153 @@
+{
+  "policy_info": {
+    "insurance_company_name": "SBI General Insurance Company Limited", // Page 1, Footer
+    "policy_name": "SuperHealth Insurance", // Page 1, Header
+    "uin": "SBIHLIP23050V012223" // Page 1, Footer
+  },
+  "benefits": {
+    "cancer": {
+      "covered": true, // Cancer is a listed Serious Illness for Health Multiplier (Page 13, List of Serious Illness, item 1). General hospitalization also covers cancer. (Page 11, C.1). Cancer Treatment Surgery is also listed for Medical Treatment Abroad (Page 33, C.24, item 1).
+      "limit_details": {
+        "type": "Up to Sum Insured / Health Multiplier applicable", // Page 11, C.1 for hospitalization; Page 12, C.3 for Health Multiplier
+        "amount_inr": null, // Base Sum Insured can be enhanced by Health Multiplier (Page 12, C.3)
+        "percentage_sum_insured": 1.0, // For base sum insured. Health Multiplier can enhance this.
+        "co_payment_percentage": null, // Optional Co-payment of 10% or 20% can be chosen (Page 39, D.3)
+        "description": "Hospitalization for cancer covered up to Sum Insured, potentially enhanced by Health Multiplier. Optional co-payment available."
+      },
+      "covered_treatments": [
+        "Hospitalization for cancer treatment", // Page 11, C.1
+        "Oral chemotherapy (Modern Treatment)", // Page 27, C.14.d
+        "Immunotherapy- Monoclonal Antibody (Modern Treatment)", // Page 27, C.14.e
+        "Robotic surgeries (Modern Treatment)", // Page 27, C.14.g
+        "Stereotactic radio surgeries (Modern Treatment)", // Page 27, C.14.h
+        "Stem cell therapy (haematological, Modern Treatment)" // Page 27, C.14.l
+      ],
+      "waiting_period_months": 1, // Initial 30-day waiting period (Page 45, E.I.a). Some cancer-related surgeries like Hysterectomy for non-malignancy have 24/12 months wait. (Page 46, E.II)
+      "waiting_period_months_PED": 24, // Page 47, E.III.a (Elite/Premier/Platinum plan); Varies per plan, 24 months is a common PED wait.
+      "sub_limits_specific_types": [], // Modern treatments are covered up to Sum Insured (Page 27, C.14)
+      "conditions_and_notes": [
+        "Health Multiplier applies for listed 37 Serious Illnesses including Cancer. (Page 12, C.3)",
+        "Initial 30-day waiting for any illness (non-accidental). (Page 45, E.I.a)",
+        "Specific disease waiting periods (12/24 months) for certain conditions. (Page 46, E.II)",
+        "Medical Treatment Abroad for Cancer Treatment Surgery covered under specific conditions. (Page 33, C.24)"
+      ]
+    },
+    "maternity": {
+      "covered": true, // Page 30, C.20 Maternity and Related Expenses Cover (Available in Platinum & Platinum Infinite plans - Annexure III, Page 73)
+      "limit_details_normal_delivery_inr": null, // Sum Insured specified in Policy Schedule for Maternity Expenses (Page 30, C.20.1). For Platinum plan: Up to INR 50,000 (N) (Page 73)
+      "limit_details_c_section_inr": null, // Sum Insured specified in Policy Schedule. For Platinum plan: Up to INR 75,000 (C-sec) (Page 73)
+      "pre_post_natal_expenses_covered": true, // Page 30, C.20.1 "including Pre-natal Medical Expenses & Post-natal check-ups"
+      "pre_post_natal_limit_inr": null, // Part of overall Maternity Expenses limit.
+      "new_born_baby_cover_included": true, // Page 30, C.20.2 New Born Baby Cover
+      "new_born_baby_limit_inr": null, // Covered under Maternity Expenses Sum Insured. (Page 31, a)
+      "new_born_baby_vaccination_covered": true, // Page 31, C.21 Child Vaccination Cover (up to 12 years of age)
+      "waiting_period_months": 24, // Page 30, C.20.1.c (for family combinations). Page 47, VI (General waiting for Maternity) & Page 75 (Product Benefit Table)
+      "waiting_period_months_PED": null, // Maternity has its own specific waiting period.
+      "max_deliveries_covered": null, // Not specified, but claim is subject to SI.
+      "age_limit_for_mother": null, // Not specified.
+      "conditions_and_notes": [
+        "Available under Platinum and Platinum Infinite plans. (Page 73, Annexure III)",
+        "Waiting period for single adult is 48 months. (Page 30, C.20.1.b)",
+        "Pre-natal check-ups from confirmation of pregnancy; Post-natal up to 8 weeks. (Page 30, C.20.1.i)",
+        "New Born Baby covered for 90 days under Maternity SI. (Page 31, C.20.2.a)"
+      ]
+    },
+    "cataract": {
+      "covered": true, // Page 46, E.II.i (Illnesses list includes Cataract)
+      "limit_per_eye_inr": null, // No specific sub-limit per eye; covered up to Sum Insured.
+      "limit_per_policy_year_inr": null, // Covered up to Sum Insured.
+      "lens_type_coverage": "Standard lens cost likely covered.", // Not specified.
+      "waiting_period_months": 24, // Page 46, E.II.a (Specific diseases waiting period - "expiry of 24/12 months (as specified in the Policy Schedule)") - Cataract falls under conditions requiring 24m or 12m based on schedule. Assuming 24m if not specified otherwise.
+      "waiting_period_months_PED": 24, // Page 47, E.III.a (PED is 24m. Specific wait for Cataract also typically 24m).
+      "conditions_and_notes": [
+        "Refractive error correction < 7.5 dioptres excluded. (Page 49, XII)",
+        "Initial 30-day waiting for any illness. (Page 45, E.I.a)"
+      ]
+    },
+    "dialysis": {
+      "covered": true, // Covered under Day Care Treatment for cancer (Page 24, C.6.b). Also under In-patient for kidney failure (Page 11, C.1)
+      "limit_details": {
+        "type": "Up to Sum Insured", // Page 11, C.1 (In-patient); Page 24, C.6 (Day Care)
+        "amount_per_session_inr": null,
+        "annual_limit_inr": null, // Up to Sum Insured
+        "co_payment_percentage": null, // Optional Co-payment of 10% or 20% (Page 39, D.3)
+        "description": "Covered under Day Care for cancer or In-patient for kidney failure."
+      },
+      "related_to_illness": "Kidney failure / Cancer requiring dialysis", // Page 14, "Kidney failure" as Serious Illness; Page 24, C.6.b
+      "waiting_period_months": 24, // Kidney failure (Serious Illness) implies a waiting period. Urogenital system diseases listed with 24/12m wait (Page 46, E.II.i)
+      "waiting_period_months_PED": 24, // Page 47, E.III.a
+      "conditions_and_notes": [
+        "Initial 30-day waiting for any illness. (Page 45, E.I.a)",
+        "If part of Cancer treatment, covered under Day care. (Page 24, C.6.b)"
+      ]
+    }
+  },
+  "exclusions": {
+    "cancer": [
+      {
+        "type_or_condition": "Carcinoma in situ, benign, pre-malignant tumors etc. (from Serious Illness definition)", // Page 14, Cancer Definition for Health Multiplier
+        "excluded": true,
+        "details": "Exclusion from 'Cancer' definition applicable for Health Multiplier benefit."
+      },
+      {
+        "type_or_condition": "Non-melanoma skin carcinoma (unless metastasized, from SI definition)", // Page 14
+        "excluded": true,
+        "unless_condition_met": "Evidence of metastases to lymph nodes or beyond."
+      },
+      {
+        "type_or_condition": "Prostate tumors not meeting specific criteria (from SI definition)", // Page 14
+        "excluded": true
+      },
+      {
+        "type_or_condition": "Unproven cancer treatments", // Page 49, XIII
+        "excluded": true
+      }
+    ],
+    "maternity": [
+      {
+        "condition": "Maternity expenses if not Platinum or Platinum Infinite Plan", // Inferred from Annexure III (Page 73)
+        "excluded": true
+      },
+      {
+        "condition": "Claims within specified waiting period (24m for family/48m for single adult)", // Page 30, C.20.1.b & c
+        "excluded": true
+      },
+      {
+        "condition": "Voluntary medical termination during first 12 weeks of conception", // Page 30, C.20.1.f
+        "excluded": true
+      },
+      {
+        "condition": "Medical expenses for ectopic pregnancy (under Maternity Expenses Cover C.20.1)", // Page 30, C.20.1.h
+        "excluded": true,
+        "details": "Note: This is distinct from general ectopic pregnancy coverage which might exist elsewhere if it's a life-threatening condition."
+      },
+      {
+        "condition": "Sterility and Infertility", // Page 49, XIV
+        "excluded": true,
+        "details": "Includes contraception, ART (IVF, etc.), gestational surrogacy, reversal of sterilization."
+      }
+    ],
+    "cataract": [
+      {
+        "condition": "Claims within 24/12 month specific disease waiting period (as per schedule)", // Page 46, E.II.a
+        "excluded": true,
+        "unless_condition_met": "Claim arising due to an Accident."
+      },
+      {
+        "condition": "Refractive error correction < 7.5 dioptres", // Page 49, XII
+        "excluded": true
+      }
+    ],
+    "dialysis": [
+      {
+        "condition": "Dialysis for kidney conditions not meeting policy's criteria for covered illness or not requiring medically necessary hospitalization/day care.", // Inferred
+        "excluded": true,
+        "details": "Coverage depends on underlying diagnosed illness and medical necessity."
+      },
+      {
+        "condition": "Unproven treatments including experimental dialysis methods", // Page 49, XIII
+        "excluded": true
+      }
+    ]
+  }
+}
